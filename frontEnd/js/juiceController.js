@@ -1,6 +1,6 @@
 angular
-  .module("juicrApp")
-  .controller("juiceController", JuiceController);
+  .module("juicrApp", ['ngDragDrop'])
+  .controller("JuiceController", JuiceController);
 
   JuiceController.$inject = ["$http"];
 
@@ -18,4 +18,26 @@ angular
         console.log(response.data)
       });
     }
+
+    this.onDrop = function (data, event) {
+    // Get custom object data.
+    var customObjectData = data['json/custom-object']; 
+
+    // Get other attached data.
+    var uriList = data['text/uri-list'];
+    };
+
+  this.testDrop = function () {
+    $( "#carrot" ).css( "visibility", "hidden" )
+       $( "#juicer" ).effect( "shake" )
+    console.log('fish');
   }
+
+
+
+  // Drag over handler.
+  this.onDragOver = function (event) {
+    console.log('hello')
+  };
+}
+

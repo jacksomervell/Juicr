@@ -7,12 +7,27 @@
 </head>
 <body>
 Hello
+
+<div ng-controller="JuiceController as juices">
+
+  <div>
+    
+    <img id = "carrot" ng-init= 'carrot= true' ng-show="carrot"  jqyoui-draggable="{index: 5, animate:true, onStop:'juices.testDrop()' }" data-drag="true" draggable="true" effect-allowed="copy" draggable-type="custom-object" data-jqyoui-options="{revert: 'invalid'}" draggable-data="{foo: 'bar'}" src="http://i.istockimg.com/file_thumbview_approve/54769060/3/stock-illustration-54769060-carrot-cartoon.jpg">
+
+  </div>
+
+    <img id = "juicer" data-drop="true" jqyoui-droppable="{index: 1, onStop:'juices.shakeShake()'}" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" src = "http://d8k4pmvhwsscm.cloudfront.net/media/catalog/product/cache/1/thumbnail/5e06319eda06f020e43594a9c230972d/s/a/sage-juicer-nutri-pro.png">
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/juiceController.js"></script>
   <script src="angular-dragdrop/src/angular-dragdrop.js"></script>
+  <script src="js/app.js"></script>
+   <script src="js/juiceController.js"></script>
+  <!-- <script src="js/dragController.js"></script> -->
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
   <link rel="stylesheet" href="css/style.css">
 </body>

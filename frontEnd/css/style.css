@@ -1,3 +1,18 @@
 body {
   background-color: red;
 }
+
+.dropper {
+  height: 100px;
+  border: 1px blue
+}
+
+.thumbnail {
+  border: 1px solid blue;
+  height: 100px;
+  width: 100px;
+}
+
+#juicer {
+  display: inline-block;
+}
