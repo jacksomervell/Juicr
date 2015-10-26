@@ -16,8 +16,22 @@ function getInfo(req, response){
 
   nutrientData = nutrientData.filter(function (el) {
     return el.name === ("Protein") ||
-          el.name === ("Energy")
-        
+          el.name === ("Energy") ||
+          el.name === ("Fat") ||
+          el.name === ("Fiber, total dietary") ||
+          el.name === ("Sugars, total") ||
+          el.name === ("Calcium, Ca") ||
+          el.name === ("Iron, Fe") ||
+          el.name === ("Magnesium, Mn") ||
+          el.name === ("Potassium, K") ||
+          el.name === ("Sodium, Na") ||
+          el.name === ("Vitamin B-6") ||
+          el.name === ("Vitamin B-12") ||
+          el.name === ("Vitamin A") ||
+          el.name === ("Vitamin B") ||
+          el.name === ("Vitamin C") ||
+          el.name === ("Vitamin D")
+          
     });
     
     response.json(nutrientData)
