@@ -7,7 +7,8 @@ angular
   function JuiceController($http) {
     var self = this;
     self.ingredients = []
-    self.ndbno = ''
+    self.nutrientNo = ''
+    self.name = ''
 
 
     self.fruitList = [
@@ -31,7 +32,7 @@ angular
     self.getData = function() {
 
      $http
-      .get('http://localhost:3000/juices/' + self.ndbno)
+      .get('http://localhost:3000/juices/' + self.nutrientNo)
       .then(function(response){
         console.log(response.data)
       });
@@ -45,16 +46,21 @@ angular
     var uriList = data['text/uri-list'];
     };
 
-  this.testDrop = function () {
-    $( "#carrot" ).css( "visibility", "hidden" )
-       $( "#juicer" ).effect( "shake", {times:35, distance:5}, 2000 )
-    console.log('fish');
+  self.testDrop = function () {
+    console.log(self.name)
+    $("#juicer" ).effect( "shake", {times:35, distance:5}, 2000 )
+    console.log(self.name);
+  }
+
+  self.setIngredient = function(selected) {
+    console.log(selected)
+    self.name = selected
+    console.log(self.name)
   }
 
 
-
   // Drag over handler.
-  this.onDragOver = function (event) {
+  self.onDragOver = function (event) {
     console.log('hello')
   };
 }
