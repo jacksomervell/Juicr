@@ -13,8 +13,9 @@ angular
     this.getData = function() {
 
      $http
-      .get('http://localhost:9000/juices/' + self.ndbno)
+      .get('http://localhost:3000/juices/' + self.ndbno)
       .then(function(response){
         console.log(response.data)
       });
     }
+  }
