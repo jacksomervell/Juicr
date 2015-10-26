@@ -48,7 +48,7 @@ angular
 
   self.testDrop = function () {
     console.log(self.name)
-    $("#juicer" ).effect( "shake", {times:35, distance:5}, 2000 )
+    $("#juicer" ).effect( "shake", {times:35, distance:5}, 1500 )
     console.log(self.name);
   }
 
