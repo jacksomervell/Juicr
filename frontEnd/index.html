@@ -12,7 +12,10 @@ Hello
 
   <div>
     
-    <img id = "carrot" ng-init= 'carrot= true' ng-show="carrot"  jqyoui-draggable="{index: 5, animate:true, onStop:'juices.testDrop()' }" data-drag="true" draggable="true" effect-allowed="copy" draggable-type="custom-object" data-jqyoui-options="{revert: 'invalid'}" draggable-data="{foo: 'bar'}" src="http://i.istockimg.com/file_thumbview_approve/54769060/3/stock-illustration-54769060-carrot-cartoon.jpg">
+ 
+    <img ng-repeat="item in juices.fruitList"  id = "{{item.name}}" jqyoui-draggable="{index: 5, animate:true, onStop:'juices.testDrop()' }" data-drag="true" draggable="true" effect-allowed="copy" draggable-type="custom-object" data-jqyoui-options="{revert: 'invalid'}" draggable-data="{foo: 'bar'}" src="{{item.image}}">
+
+     <!-- <img id = "apple" jqyoui-draggable="{index: 5, animate:true, onStop:'juices.testDrop()' }" data-drag="true" draggable="true" effect-allowed="copy" draggable-type="custom-object" data-jqyoui-options="{revert: 'invalid'}" draggable-data="{foo: 'bar'}" src="images/apple.gif"> -->
 
   </div>
 

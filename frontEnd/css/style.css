@@ -1,5 +1,5 @@
 body {
-  background-color: red;
+  background-color: lightgrey;
 }
 
 .dropper {
@@ -15,4 +15,29 @@ body {
 
 #juicer {
   display: inline-block;
+}
+
+#carrot,
+#banana,
+#beetroot,
+#blackberry,
+#broccoli,
+#cabbage,
+#carrot,
+#celery,
+#ginger,
+#lemon,
+#lime,
+#orange,
+#pear,
+#strawberry
+
+ {
+  height: 150px;
+  width: 150px;
+  display: inline-block;
+}
+
+#apple {
+  height: 100px;
 }
