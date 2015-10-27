@@ -9,6 +9,7 @@ angular
     self.ingredients = []
     self.nutrientNo = ''
     self.name = ''
+    self.drops = 0
 
 
     self.fruitList = [
@@ -47,7 +48,7 @@ angular
     };
 
   self.testDrop = function() {
-    $("#juicer" ).effect( "shake", {times:35, distance:5}, 1500 )
+    console.log('hi')
   }
 
   // self.setIngredient = function(selected) {
@@ -56,12 +57,16 @@ angular
   //   console.log(self.name)
   // }
 
-  self.deliverData = function() {
-    console.log("data")
+  self.deliverData = function(selected, ui) {
+    console.log(selected)
   }
 
   self.dropped = function(){
     console.log('dropped!')
+    $("#juicer" ).effect( "shake", {times:35, distance:5}, 1500 )
+    self.drops = self.drops + 1
+    console.log(self.drops)
+    console.log()
   }
   // Drag over handler.
   self.onDragOver = function (event) {
