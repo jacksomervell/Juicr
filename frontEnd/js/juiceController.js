@@ -61,16 +61,31 @@ angular
     console.log(selected)
   }
 
-  self.dropped = function(){
+  self.Drop = function(event, ui){
+    console.log("hello")
+  }
+
+  self.dropped = function(event, ui){
     console.log('dropped!')
-    $("#juicer" ).effect( "shake", {times:35, distance:5}, 1500 )
+    console.log(ui.draggable[0].id)
+    $("#juicer").effect( "shake", {times:35, distance:5}, 1500 )
     self.drops = self.drops + 1
     console.log(self.drops)
     console.log()
+
   }
   // Drag over handler.
   self.onDragOver = function (event) {
     console.log('hello')
   };
+
+  // self.juicerDropping = function(){
+  //   $("#juicer").droppable({
+  //      drop: function(event, ui) {
+  //               console.log('hello')
+  //                // $(ui.draggable).doSomething();
+  //            }
+  //   });
+  // }
 }
 
