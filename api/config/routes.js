@@ -4,7 +4,7 @@ var express = require('express'),
 
 var mainController = require('../controllers/mainController')
 
-router.route('/juices/:ndbno')
+router.route('/juices/:nutrientNo')
   .get(mainController.getInfo)
 
 module.exports = router;
