@@ -12,12 +12,12 @@
   <div>
     
  
-    <img ng-repeat="item in juices.fruitList" ng-init="Hello = true" ng-show= "Hello" class= "ng-hide" id = "{{item.name}}" jqyoui-draggable="{index: 5, animate:true, onStop:'juices.testDrop()', placeholder: 'keep'}" data-drag="true" draggable="true" effect-allowed="copy" draggable-type="custom-object" data-jqyoui-options="{ helper:'clone', cursor: 'move', cursorAt: { top: 56, left: 56 }}" draggable-data="{foo: 'bar'}" src="{{item.image}}">
+    <img ng-repeat="item in juices.fruitList" ng-init="Hello = true" ng-show= "Hello" class= "ng-hide" class = "ingredient-image" id = "{{item.name}}" jqyoui-draggable="{index: 5, animate:true, onStop:'juices.testDrop()', placeholder: 'keep'}" data-drag="true" draggable="true"  data-jqyoui-options="{ helper:'clone', cursor: 'move', cursorAt: { top: 56, left: 56 }, revert: 'invalid'}" draggable-data="{foo: 'bar'}" src="{{item.image}}">
 
 
   </div>
 
-    <img id = "juicer" data-drop="true" jqyoui-droppable="{index: 1, onStop:'juices.shakeShake()'}" data-drag="true" data-jqyoui-options="{revert: 'invalid'}" src = "http://d8k4pmvhwsscm.cloudfront.net/media/catalog/product/cache/1/thumbnail/5e06319eda06f020e43594a9c230972d/s/a/sage-juicer-nutri-pro.png">
+    <img id = "juicer" data-drop="true" jqyoui-droppable="{onDrop:'juices.dropped()'}" data-jqyoui-options src = "http://d8k4pmvhwsscm.cloudfront.net/media/catalog/product/cache/1/thumbnail/5e06319eda06f020e43594a9c230972d/s/a/sage-juicer-nutri-pro.png">
 
 
 

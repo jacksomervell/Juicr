@@ -60,6 +60,9 @@ angular
     console.log("data")
   }
 
+  self.dropped = function(){
+    console.log('dropped!')
+  }
   // Drag over handler.
   self.onDragOver = function (event) {
     console.log('hello')
