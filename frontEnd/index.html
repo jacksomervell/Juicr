@@ -13,7 +13,7 @@ Hello
   <div>
     
  
-    <img ng-repeat="item in juices.fruitList" ng-init="Hello = true" ng-click="Hello = false" ng-show= "Hello" class= "ng-hide" id = "{{item.name}}" jqyoui-draggable="{index: 5, animate:true, onStop:'juices.testDrop()', placeholder: 'keep' }" data-drag="true" draggable="true" effect-allowed="copy" draggable-type="custom-object" data-jqyoui-options="{ helper:'clone'}" draggable-data="{foo: 'bar'}" src="{{item.image}}">
+    <img ng-repeat="item in juices.fruitList" ng-init="Hello = true" ng-show= "Hello" class= "ng-hide" id = "{{item.name}}" jqyoui-draggable="{index: 5, animate:true, onStop:'juices.testDrop()', placeholder: 'keep'}" data-drag="true" draggable="true" effect-allowed="copy" draggable-type="custom-object" data-jqyoui-options="{ helper:'clone', cursor: 'move', cursorAt: { top: 56, left: 56 }}" draggable-data="{foo: 'bar'}" src="{{item.image}}">
 
 
   </div>

@@ -56,6 +56,9 @@ angular
   //   console.log(self.name)
   // }
 
+  self.deliverData = function() {
+    console.log("data")
+  }
 
   // Drag over handler.
   self.onDragOver = function (event) {
