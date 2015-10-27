@@ -71,7 +71,9 @@ angular
     $("#juicer").effect( "shake", {times:35, distance:5}, 1500 )
     self.drops = self.drops + 1
     console.log(self.drops)
-    console.log()
+    var vegId = ui.draggable[0].id
+    self.ingredients.push(vegId)
+    console.log(self.ingredients)
 
   }
   // Drag over handler.
