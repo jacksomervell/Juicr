@@ -10,6 +10,7 @@ angular
     self.nutrientNo = ''
     self.name = ''
     self.drops = 0
+    self.nutritionData
 
 
     self.fruitList = [
@@ -35,7 +36,8 @@ angular
      $http
       .get('http://localhost:3000/juices/' + self.nutrientNo)
       .then(function(response){
-        console.log(response.data)
+        self.nutritionData = response.data
+        console.log(self.nutritionData)
       });
     }
 
