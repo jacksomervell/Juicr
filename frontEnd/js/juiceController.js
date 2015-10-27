@@ -11,7 +11,6 @@ angular
     self.name = ''
     self.drops = 0
     self.nutritionData
-    self.nutritionDataSorted
 
 
     self.fruitList = [
@@ -41,8 +40,6 @@ angular
         delete self.nutritionData[i]['sourcecode'];
         delete self.nutritionData[i]['unit'];
             }
-          
-        // console.log(self.nutritionData)
     
     }
 
@@ -69,15 +66,15 @@ angular
   self.dropped = function(event, ui){
     console.log('dropped!')
     $("#juicer").effect( "shake", {times:35, distance:5}, 1500 )
-    self.drops = self.drops + 1
-    console.log(self.drops)
-    var vegId = ui.draggable[0].id
-    var nutrientID = ui.draggable[0].name
-    self.ingredients.push(vegId)
-    self.nutrientNo = nutrientID
-    console.log(self.nutrientNo)
-    console.log(self.ingredients)
-    self.getData()
+      self.drops = self.drops + 1
+      console.log(self.drops)
+      var vegId = ui.draggable[0].id
+      var nutrientID = ui.draggable[0].name
+      self.ingredients.push(vegId)
+      self.nutrientNo = nutrientID
+      console.log(self.nutrientNo)
+      console.log(self.ingredients)
+      self.getData()
 
   }
 
