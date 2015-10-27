@@ -36,8 +36,18 @@ body {
   position: relative;
   position: absolute;
   width: 100px;
-  left: 530px;
+  left: 515px;
   top: 355px;
+}
+
+#pouring {
+  display: inline-block;
+  position: relative;
+  position: absolute;
+  width: 0px;
+  top: 320px;
+  left: 490px;
+  transform: rotate(-20deg);
 }
 
 #carrot,

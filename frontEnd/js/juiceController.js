@@ -75,7 +75,7 @@ angular
       console.log(self.nutrientNo)
       console.log(self.ingredients)
       self.getData()
-
+      $( "#pouring" ).delay(1000).animate({width: "90px"}, 1500).delay(5000).animate({opacity: "0"}, 1000).delay(1000).animate({opacity: 1, width: "0px"}, 0)
   }
 
   // self.juicerDropping = function(){
