@@ -46,17 +46,15 @@ angular
     var uriList = data['text/uri-list'];
     };
 
-  self.testDrop = function () {
-    console.log(self.name)
+  self.testDrop = function() {
     $("#juicer" ).effect( "shake", {times:35, distance:5}, 1500 )
-    console.log(self.name);
   }
 
-  self.setIngredient = function(selected) {
-    console.log(selected)
-    self.name = selected
-    console.log(self.name)
-  }
+  // self.setIngredient = function(selected) {
+  //   console.log(selected)
+  //   self.name = selected
+  //   console.log(self.name)
+  // }
 
 
   // Drag over handler.
