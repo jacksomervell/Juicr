@@ -13,20 +13,20 @@ angular
 
 
     self.fruitList = [
-    {'name': 'apple', 'image': 'images/apple.gif', 'nutritentNo': 09502 },
-    {'name': 'banana', 'image': 'images/banana.png', 'nutritentNo': 09040 },
-    {'name': 'beetroot', 'image': 'images/beet.png', 'nutritentNo': 11080 },
-    {'name': 'blackberry', 'image': 'images/blackberry.jpeg', 'nutritentNo': 09042 },
-    {'name': 'broccoli', 'image': 'images/broccoli.png', 'nutritentNo': 11090 },
-    {'name': 'cabbage', 'image': 'images/cabbage.jpeg', 'nutritentNo': 11749 },
-    {'name': 'carrot', 'image': 'images/carrot.png', 'nutritentNo': 11124 },
-    {'name': 'celery', 'image': 'images/celery.jpg', 'nutritentNo': 11143 },
-    {'name': 'ginger', 'image': 'images/ginger.png', 'nutritentNo': 11216 },
-    {'name': 'lemon', 'image': 'images/lemon.jpeg', 'nutritentNo': 09150 },
-    {'name': 'lime', 'image': 'images/lime.png', 'nutritentNo': 09159 },
-    {'name': 'orange', 'image': 'images/orange.png', 'nutritentNo': 09200 },
-    {'name': 'pear', 'image': 'images/pear.jpeg', 'nutritentNo': 09252 },
-    {'name': 'strawberry', 'image': 'images/strawberry.png', 'nutritentNo': 09316 }
+    {'name': 'apple', 'image': 'images/apple.gif', 'nutrientNo': 09502 },
+    {'name': 'banana', 'image': 'images/banana.png', 'nutrientNo': 09040 },
+    {'name': 'beetroot', 'image': 'images/beet.png', 'nutrientNo': 11080 },
+    {'name': 'blackberry', 'image': 'images/blackberry.jpeg', 'nutrientNo': 09042 },
+    {'name': 'broccoli', 'image': 'images/broccoli.png', 'nutrientNo': 11090 },
+    {'name': 'cabbage', 'image': 'images/cabbage.jpeg', 'nutrientNo': 11749 },
+    {'name': 'carrot', 'image': 'images/carrot.png', 'nutrientNo': 11124 },
+    {'name': 'celery', 'image': 'images/celery.jpg', 'nutrientNo': 11143 },
+    {'name': 'ginger', 'image': 'images/ginger.png', 'nutrientNo': 11216 },
+    {'name': 'lemon', 'image': 'images/lemon.jpeg', 'nutrientNo': 09150 },
+    {'name': 'lime', 'image': 'images/lime.png', 'nutrientNo': 09159 },
+    {'name': 'orange', 'image': 'images/orange.png', 'nutrientNo': 09200 },
+    {'name': 'pear', 'image': 'images/pear.jpeg', 'nutrientNo': 09252 },
+    {'name': 'strawberry', 'image': 'images/strawberry.png', 'nutrientNo': 09316 }
 
     ]
 
@@ -47,27 +47,11 @@ angular
     var uriList = data['text/uri-list'];
     };
 
-  self.testDrop = function() {
-    console.log('hi')
-  }
-
-  // self.setIngredient = function(selected) {
-  //   console.log(selected)
-  //   self.name = selected
-  //   console.log(self.name)
-  // }
-
-  self.deliverData = function(selected, ui) {
-    console.log(selected)
-  }
-
-  self.Drop = function(event, ui){
-    console.log("hello")
-  }
 
   self.dropped = function(event, ui){
     console.log('dropped!')
     console.log(ui.draggable[0].id)
+    console.log(ui.draggable[0].name)
     $("#juicer").effect( "shake", {times:35, distance:5}, 1500 )
     self.drops = self.drops + 1
     console.log(self.drops)
@@ -76,10 +60,6 @@ angular
     console.log(self.ingredients)
 
   }
-  // Drag over handler.
-  self.onDragOver = function (event) {
-    console.log('hello')
-  };
 
   // self.juicerDropping = function(){
   //   $("#juicer").droppable({
