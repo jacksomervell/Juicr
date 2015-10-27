@@ -11,6 +11,7 @@ angular
     self.name = ''
     self.drops = 0
     self.nutritionData
+    self.nutritionDataSorted
 
 
     self.fruitList = [
@@ -31,6 +32,20 @@ angular
 
     ]
 
+    self.showData = function () {
+      for (var i = 0; i < self.nutritionData.length; i++) {
+        delete self.nutritionData[i]['dp'];
+        delete self.nutritionData[i]['measures'];
+        delete self.nutritionData[i]['nutrient_id'];
+        delete self.nutritionData[i]['se'];
+        delete self.nutritionData[i]['sourcecode'];
+        delete self.nutritionData[i]['unit'];
+            }
+          
+        // console.log(self.nutritionData)
+    
+    }
+
     self.getData = function() {
 
      $http
@@ -38,6 +53,7 @@ angular
       .then(function(response){
         self.nutritionData = response.data
         console.log(self.nutritionData)
+        self.showData()
       });
     }
 
