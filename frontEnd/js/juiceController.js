@@ -33,6 +33,7 @@ angular
 
     ]
 
+//this one deletes all the unneccessary data from what is returned
     self.showData = function () {
       for (var i = 0; i < self.nutritionData.length; i++) {
         delete self.nutritionData[i]['dp'];
@@ -41,24 +42,27 @@ angular
         delete self.nutritionData[i]['se'];
         delete self.nutritionData[i]['sourcecode'];
         delete self.nutritionData[i]['unit'];
+        delete self.nutritionData[i]['group'];
             }
         
     }
 
+//this one actually gets the data from the api
     self.getData = function() {
 
      $http
       .get('http://localhost:3000/juices/' + self.nutrientNo)
       .then(function(response){
         self.nutritionData = response.data
-        console.log(self.nutritionData)
         self.showData()
         self.recipeData.push(self.nutritionData)
+        self.concatRecipeData()
         console.log(self.recipeData)
+
       });
     }
 
-
+//this is what happens when an ingredient is dropped into the blender. Needs modularising!
   self.dropped = function(event, ui){
     console.log('dropped!')
     $("#juicer").effect( "shake", {times:35, distance:5}, 1500, function(){
@@ -74,6 +78,15 @@ angular
       $( "#pouring" ).delay(1000).animate({width: "90px"}, 1500).delay(2000).animate({opacity: "0"}, 1000).delay(1000).animate({opacity: 1, width: "0px"}, 0).src = 'images/pouring.gif'
     }
 
-  }
+//manipulating the data after it's reduced down to what we need
+    self.concatRecipeData = function (){
+      self.recipeData = [].concat.apply([], self.recipeData);
+    }
+  
 
+//flattening the nurtient array of objects into one object:
 
+self.flattenNutrientArray = function(){
+}
+
+}

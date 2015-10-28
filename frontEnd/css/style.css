@@ -172,3 +172,16 @@ left: 518px;
     left: 5px;
 
 }
+
+#nutrition-data {
+    display: inline-block;
+    position: relative;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 250px;
+    top: 100px;
+    background-color: blue;
+    overflow: scroll;
+    color: white;
+}
