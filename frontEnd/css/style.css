@@ -50,6 +50,18 @@ body {
   transform: rotate(-20deg);
 }
 
+#the-juice {
+display: inline-block;
+position: relative;
+position: absolute;
+width: 94px;
+background-color: green;
+height: 10px;
+top: 460px;
+left: 518px;
+border-radius: -50px;
+}
+
 #carrot,
 #banana,
 #beetroot,

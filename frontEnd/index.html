@@ -19,12 +19,18 @@
 
     <img id= "juicer" data-drop="true" jqyoui-droppable="{onDrop:'juices.dropped'}" data-jqyoui-options src = "images/juicer2.png">
 
-    <img id = "beaker" src = "images/beaker.png"> 
+    <img id = "beaker" src = "images/beaker-straight.png"> 
 
     <img id = "pouring" src= "images/pouringfast.gif">
 
+    <img id = "the-juice">
+
   <div ng-show = "juices.drops > 7" >
     <h1>JUICE MADE</h1>
+  </div>
+
+  <div id= "nutrition-data" ng-show = 'juices.drops > 7'>
+    {{juices.nutritionData}}
   </div>
 </div>
 
