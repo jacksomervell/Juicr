@@ -61,6 +61,14 @@ angular
         
     }
 
+    self.fruitNoise = function(){
+      var fruitPlay = soundManager.createSound({
+      id: 'squidge',
+      url: 'sounds/Squidge.m4a'
+      });
+      fruitPlay.play()
+    }
+
 //this one actually gets the data from the api
     self.getData = function() {
 
@@ -85,7 +93,7 @@ angular
             self.drops = self.drops + 1})
     $( "#pouring" ).animate({width: "90px"}, 2000, function(){
                 }).delay(2000).animate({opacity: "0"}, 1000).animate({opacity: 1, width: "0px"}, 0)
-
+      self.fruitNoise()
       var vegId = ui.draggable[0].id
       var nutrientID = ui.draggable[0].name
       self.ingredients.push(vegId)
