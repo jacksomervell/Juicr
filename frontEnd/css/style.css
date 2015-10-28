@@ -185,3 +185,7 @@ left: 518px;
     overflow: scroll;
     color: white;
 }
+
+#view-container{
+  min-height: 60%
+}

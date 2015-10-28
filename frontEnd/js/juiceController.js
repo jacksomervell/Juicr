@@ -1,5 +1,5 @@
 angular
-  .module("juicrApp", ['ngDragDrop'])
+  .module("juicrApp")
   .controller("JuiceController", JuiceController);
 
   JuiceController.$inject = ["$http"];
@@ -16,19 +16,17 @@ angular
     self.juicrApp = []
     self.juiceName = ''
 
-    //local storage saving
+    // this.saveSetup = function() {
 
-    this.saveSetup = function() {
+    //   self.juicrApp = JSON.parse(localStorage.getItem('juicrApp'));
+    //   var index = self.juicrApp.length -1
+    //   self.juicrApp[index].recipeData = self.recipeData
+    //   self.juicrApp[index].ingredients = self.ingredients
+    //   self.juicrApp[index].name = self.juiceName
+    //   console.log(self.juicrApp[index])
+    //   localStorage.setItem('juicrApp', JSON.stringify(self.juicrApp))     
 
-      self.juicrApp = JSON.parse(localStorage.getItem('juicrApp'));
-      var index = self.juicrApp.length -1
-      self.juicrApp[index].recipeData = self.recipeData
-      self.juicrApp[index].ingredients = self.ingredients
-      self.juicrApp[index].name = self.juiceName
-      console.log(self.juicrApp[index])
-      localStorage.setItem('juicrApp', JSON.stringify(self.juicrApp))     
-
-    }
+    // }
 
 
     self.fruitList = [
@@ -101,8 +99,5 @@ angular
   
 
 //flattening the nurtient array of objects into one object:
-
-self.flattenNutrientArray = function(){
-}
 
 }

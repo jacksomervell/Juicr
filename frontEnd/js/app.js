@@ -1,5 +1,5 @@
 angular
-  .module("juicrApp", ["ui.router"])
+  .module("juicrApp", ["ui.router", 'ngDragDrop'])
   .config(MainRouter);
 
   function MainRouter($stateProvider, $urlRouterProvider) {
@@ -16,15 +16,9 @@ angular
       templateUrl: 'login.html'
     })
 
-
-  //   .state('quiz', {
-  //     url: '/quiz',
-  //     templateUrl: 'quiz.html'
-  //   })
-
-  //   .state('score', {
-  //     url: '/score',
-  //     templateUrl: 'score.html'
-  //   })
+    .state('test', {
+      url: '/test',
+      templateUrl: 'test.html'
+    })
 
   }
