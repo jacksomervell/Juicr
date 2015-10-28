@@ -5,16 +5,17 @@ angular
   function MainRouter($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
 
-  // $stateProvider
-  //   .state('login', {
-  //     url: '/',
-  //     templateUrl: 'login.html'
-  //   })
+  $stateProvider
+    .state('juicing', {
+      url: '/juicing',
+      templateUrl: 'juicing.html'
+    })
 
-  //   .state('setup', {
-  //     url: '/setup',
-  //     templateUrl: 'setup.html'
-  //   })
+    .state('login', {
+      url: '/',
+      templateUrl: 'login.html'
+    })
+
 
   //   .state('quiz', {
   //     url: '/quiz',

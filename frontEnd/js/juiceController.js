@@ -13,6 +13,22 @@ angular
     self.nutritionData
     self.recipeData = []
     self.hovername = ''
+    self.juicrApp = []
+    self.juiceName = ''
+
+    //local storage saving
+
+    this.saveSetup = function() {
+
+      self.juicrApp = JSON.parse(localStorage.getItem('juicrApp'));
+      var index = self.juicrApp.length -1
+      self.juicrApp[index].recipeData = self.recipeData
+      self.juicrApp[index].ingredients = self.ingredients
+      self.juicrApp[index].name = self.juiceName
+      console.log(self.juicrApp[index])
+      localStorage.setItem('juicrApp', JSON.stringify(self.juicrApp))     
+
+    }
 
 
     self.fruitList = [
