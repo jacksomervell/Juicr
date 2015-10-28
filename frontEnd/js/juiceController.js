@@ -11,6 +11,7 @@ angular
     self.name = ''
     self.drops = 0
     self.nutritionData
+    self.recipeData = []
     self.hovername = ''
 
 
@@ -41,7 +42,7 @@ angular
         delete self.nutritionData[i]['sourcecode'];
         delete self.nutritionData[i]['unit'];
             }
-    
+        
     }
 
     self.getData = function() {
@@ -52,6 +53,8 @@ angular
         self.nutritionData = response.data
         console.log(self.nutritionData)
         self.showData()
+        self.recipeData.push(self.nutritionData)
+        console.log(self.recipeData)
       });
     }
 
