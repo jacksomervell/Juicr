@@ -65,9 +65,9 @@ angular
 
   self.dropped = function(event, ui){
     console.log('dropped!')
-    $("#juicer").effect( "shake", {times:35, distance:5}, 1500 )
-      self.drops = self.drops + 1
-      console.log(self.drops)
+    $("#juicer").effect( "shake", {times:35, distance:5}, 1500, function(){
+            self.drops = self.drops + 1
+            console.log(self.drops) })
       var vegId = ui.draggable[0].id
       var nutrientID = ui.draggable[0].name
       self.ingredients.push(vegId)
@@ -75,16 +75,9 @@ angular
       console.log(self.nutrientNo)
       console.log(self.ingredients)
       self.getData()
-      $( "#pouring" ).delay(1000).animate({width: "90px"}, 1500).delay(5000).animate({opacity: "0"}, 1000).delay(1000).animate({opacity: 1, width: "0px"}, 0)
+      $( "#pouring" ).delay(1000).animate({width: "90px"}, 1500).delay(2000).animate({opacity: "0"}, 1000).delay(1000).animate({opacity: 1, width: "0px"}, 0)
+    }
+
   }
 
-  // self.juicerDropping = function(){
-  //   $("#juicer").droppable({
-  //      drop: function(event, ui) {
-  //               console.log('hello')
-  //                // $(ui.draggable).doSomething();
-  //            }
-  //   });
-  // }
-}
 

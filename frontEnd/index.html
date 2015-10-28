@@ -23,7 +23,15 @@
 
     <img id = "pouring" src= "images/pouringfast.gif">
 
-    <img id = "the-juice">
+    <div ng-show = 'juices.drops >= 1'  id = "bottom-juice"></div>
+    <div ng-show = 'juices.drops >= 2' class = "second-juice"></div>
+    <div ng-show = 'juices.drops >= 3' class = "third-juice"></div>
+    <div ng-show = 'juices.drops >= 4' class = "fourth-juice"></div>
+    <div ng-show = 'juices.drops >= 5' class = "fifth-juice"></div>
+    <div ng-show = 'juices.drops >= 6' class = "sixth-juice"></div>
+    <div ng-show = 'juices.drops >= 7' class = "seventh-juice"></div>
+    <div ng-show = 'juices.drops >= 8' class = "eighth-juice"></div>
+    <div ng-show = 'juices.drops >= 9' class = "ninth-juice"></div>
 
   <div ng-show = "juices.drops > 7" >
     <h1>JUICE MADE</h1>

@@ -50,7 +50,7 @@ body {
   transform: rotate(-20deg);
 }
 
-#the-juice {
+#bottom-juice {
 display: inline-block;
 position: relative;
 position: absolute;
@@ -59,7 +59,59 @@ background-color: green;
 height: 10px;
 top: 460px;
 left: 518px;
-border-radius: -50px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+transition: all linear 0.5s;
+}
+
+.second-juice,
+.third-juice,
+.fourth-juice,
+.fifth-juice,
+.sixth-juice,
+.seventh-juice,
+.eighth-juice,
+.ninth-juice {
+  display: inline-block;
+position: relative;
+position: absolute;
+width: 94px;
+background-color: green;
+height: 10px;
+left: 518px;
+}
+
+.second-juice {
+  top: 450px;
+}
+
+
+.third-juice {
+  top: 440px;
+}
+
+.fourth-juice {
+  top: 430px;
+}
+
+.fifth-juice {
+  top: 420px;
+}
+
+.sixth-juice {
+  top: 410px;
+}
+
+.seventh-juice {
+  top: 400px;
+}
+
+.eighth-juice {
+  top: 390px;
+}
+
+.ninth-juice {
+  top: 380px;
 }
 
 #carrot,
