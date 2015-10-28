@@ -12,6 +12,12 @@ body {
   width: 100%;
 }
 
+.ingredient-name {
+   display: inline-block;
+  position: relative;
+  position: absolute;
+  left: 400px;
+}
 .dropper {
   height: 100px;
   border: 1px blue
@@ -153,4 +159,16 @@ left: 518px;
   width: 200px;
   display: inline-block;
   float: right;
+}
+
+#juice-ingredient-container {
+    display: inline-block;
+    position: relative;
+    position: absolute;
+    width: 200px;
+    height: 400px;
+    background-color: green;
+    top: 5px;
+    left: 5px;
+
 }

@@ -11,6 +11,7 @@ angular
     self.name = ''
     self.drops = 0
     self.nutritionData
+    self.hovername = ''
 
 
     self.fruitList = [
@@ -54,14 +55,6 @@ angular
       });
     }
 
-    self.onDrop = function (data, event) {
-    // Get custom object data.
-    var customObjectData = data['json/custom-object']; 
-
-    // Get other attached data.
-    var uriList = data['text/uri-list'];
-    };
-
 
   self.dropped = function(event, ui){
     console.log('dropped!')
@@ -75,7 +68,7 @@ angular
       console.log(self.nutrientNo)
       console.log(self.ingredients)
       self.getData()
-      $( "#pouring" ).delay(1000).animate({width: "90px"}, 1500).delay(2000).animate({opacity: "0"}, 1000).delay(1000).animate({opacity: 1, width: "0px"}, 0)
+      $( "#pouring" ).delay(1000).animate({width: "90px"}, 1500).delay(2000).animate({opacity: "0"}, 1000).delay(1000).animate({opacity: 1, width: "0px"}, 0).src = 'images/pouring.gif'
     }
 
   }
