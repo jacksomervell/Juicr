@@ -78,10 +78,14 @@ angular
 
 //this is what happens when an ingredient is dropped into the blender. Needs modularising!
   self.dropped = function(event, ui){
+
     console.log('dropped!')
+
     $("#juicer").effect( "shake", {times:35, distance:5}, 1500, function(){
-            self.drops = self.drops + 1
-            console.log(self.drops) })
+            self.drops = self.drops + 1})
+    $( "#pouring" ).animate({width: "90px"}, 2000, function(){
+                }).delay(2000).animate({opacity: "0"}, 1000).animate({opacity: 1, width: "0px"}, 0)
+
       var vegId = ui.draggable[0].id
       var nutrientID = ui.draggable[0].name
       self.ingredients.push(vegId)
@@ -89,9 +93,9 @@ angular
       console.log(self.nutrientNo)
       console.log(self.ingredients)
       self.getData()
-      $( "#pouring" ).delay(1000).animate({width: "90px"}, 1500).delay(2000).animate({opacity: "0"}, 1000).delay(1000).animate({opacity: 1, width: "0px"}, 0).src = 'images/pouring.gif'
-    }
-
+      
+    
+}
 //manipulating the data after it's reduced down to what we need
     self.concatRecipeData = function (){
       self.recipeData = [].concat.apply([], self.recipeData);
