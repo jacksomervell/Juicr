@@ -16,9 +16,9 @@ angular
       templateUrl: 'login.html'
     })
 
-    .state('test', {
-      url: '/test',
-      templateUrl: 'test.html'
+    .state('cabinet', {
+      url: '/cabinet',
+      templateUrl: 'cabinet.html'
     })
 
   }

@@ -32,7 +32,7 @@ body {
 #juicer {
   position: relative;
   display: inline-block;
-  left: 200px;
+  left: 270px;
   top: 100px;
   width: 400px;
 }
@@ -42,7 +42,7 @@ body {
   position: relative;
   position: absolute;
   width: 100px;
-  left: 515px;
+  left: 585px;
   top: 355px;
 }
 
@@ -52,7 +52,7 @@ body {
   position: absolute;
   width: 0px;
   top: 320px;
-  left: 490px;
+  left: 560px;
   transform: rotate(-20deg);
 }
 
@@ -64,7 +64,7 @@ width: 94px;
 background-color: green;
 height: 10px;
 top: 460px;
-left: 518px;
+left: 588px;
 border-bottom-left-radius: 5px;
 border-bottom-right-radius: 5px;
 transition: all linear 0.5s;
@@ -84,7 +84,7 @@ position: absolute;
 width: 94px;
 background-color: green;
 height: 10px;
-left: 518px;
+left: 588px;
 }
 
 .second-juice {
