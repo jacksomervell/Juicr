@@ -146,7 +146,12 @@ angular
       self.recipeData = [].concat.apply([], self.recipeData);
     }
   
+//menu slide-down:
 
-//flattening the nurtient array of objects into one object:
+  this.menuSlide = function(){
+    $( ".menu-dropdown" ).slideToggle( "slow", function() {
+      console.log("hooray")
+      });
+    };
 
 }

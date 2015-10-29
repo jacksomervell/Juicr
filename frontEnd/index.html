@@ -23,15 +23,20 @@
 
 </head>
 <body>
-  <div class = "index-container">
+  <div class = "index-container" ng-controller="JuiceController as juices">
 
     <h1 class = 'logo'>Juicr</h1>
 
+    <div class= "menu">
+      <span class = "menu-item" ui-sref="juicing"> Make a juice! | </span>
+      <span class = "menu-item" ui-sref="juicing"> Find a juice | </span>
+      <span class = "menu-item" ui-sref="juicing"> Meet the team | </span>
+      <span class = "menu-item" ui-sref="juicing"> Contact us | </span>
   </div>
 
-  
   <div id= "view-container" ui-view>
   </div>
+ 
 
 
 
