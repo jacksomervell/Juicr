@@ -61,6 +61,16 @@ angular
         
     }
 
+//the blending noise
+  self.blendNoise = function(){
+      var blendPlay = soundManager.createSound({
+      id: 'blend',
+      url: 'sounds/Blending.mov'
+      });
+      blendPlay.play()
+    }
+
+//the squidge noise
     self.fruitNoise = function(){
       var fruitPlay = soundManager.createSound({
       id: 'squidge',
@@ -89,11 +99,11 @@ angular
 
     console.log('dropped!')
 
-    $("#juicer").effect( "shake", {times:35, distance:5}, 1500, function(){
+    $("#juicer").effect( "shake", {times:35, distance:5}, 3000, function(){
             self.drops = self.drops + 1})
     $( "#pouring" ).animate({width: "90px"}, 2000, function(){
                 }).delay(2000).animate({opacity: "0"}, 1000).animate({opacity: 1, width: "0px"}, 0)
-      self.fruitNoise()
+      self.blendNoise()
       var vegId = ui.draggable[0].id
       var nutrientID = ui.draggable[0].name
       self.ingredients.push(vegId)
