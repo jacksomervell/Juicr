@@ -1,10 +1,10 @@
 
 <div ng-init='juices.getRecords()' ng-controller="JuiceController as juices">
 
-<h1> Cabinet </h1>
-<h2> {{juices.allRecords.length}} juices stored </h2>
+<h1 id = 'cabinet-title'> Cabinet </h1>
+<span id = 'stored-amount'> -- <strong>{{juices.allRecords.length}}</strong> juices stored -- </span>
 
-  <div ng-repeat='juice in juices.allRecords'>
+  <div class= "juice-jar" ng-repeat='juice in juices.allRecords'>
   
 
   <br>
