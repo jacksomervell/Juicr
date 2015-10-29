@@ -168,18 +168,7 @@ border-right: solid 0.1em black;
 }
 
 
-#nutrition-data {
-    display: inline-block;
-    position: relative;
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    left: 350px;
-    top: 100px;
-    background-color: blue;
-    overflow: scroll;
-    color: white;
-}
+
 
 #view-container{
   min-height: 60%;
@@ -382,6 +371,7 @@ hr {
 
 .recipe-list-item {
   padding-left: 30px;
+  text-transform: capitalize;
 }
 
 .ingredient-name {
@@ -406,4 +396,79 @@ hr {
 .hover-info-holder {
   display: inline-block;
   width: 500px;
+}
+
+.juice-made {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+
+.saving-juice-info {
+  display: block;
+  text-align: center;
+  font-family: 'Cambay', sans-serif;
+  margin-bottom: 20px;
+  font-size: 20px;
+  
+}
+
+#nutrition-data {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    left: 400px;
+    top: 100px;
+    background-color: dodgerblue;
+    overflow: hidden;
+    color: white;
+    border: 3px solid white;
+}
+
+#nutrition-info-recipe-container {
+  overflow: scroll;
+  max-height: 120px;
+  border: 3px white
+}
+
+form {
+  padding-left: 10px;
+}
+
+input {
+  width:100px;
+  border:none;
+  border-bottom:1px solid #757575;
+  border-radius: 3px;
+  margin: 0 auto;
+  font-family: 'Cambay', sans-serif;
+  color: dodgerblue;
+  
+}
+
+.inputting {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Cambay', sans-serif;
+}
+
+button {
+  border-color: 3px white;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  font-size: 14px;
+  text-transform: none;
+  height: 35px;
+  width: 120px;
+  text-align: center;
+  font-family: 'Cambay', sans-serif;
+  font-size: 15px;
+  background-color: LimeGreen;
+
 }

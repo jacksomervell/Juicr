@@ -107,6 +107,15 @@ angular
       fruitPlay.play()
     }
 
+//the zelda noise 
+  self.zeldaNoise = function(){
+    var zeldaPlay = soundManager.createSound({
+      id: 'zelda',
+      url: 'sounds/Zelda.mov'
+    })
+    zeldaPlay.play()
+  }
+
 //this one actually gets the data from the api
     self.getData = function() {
 
