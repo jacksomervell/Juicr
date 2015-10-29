@@ -273,4 +273,15 @@ input {
   color: blue;
 }
 
+.logo {
+  font-family: 'Varela Round', sans-serif;
+  font-family: 'Pacifico', cursive;
+  margin-top: 0px;
+  color: white;
+}
+
+.index-container {
+  background: LimeGreen;
+  margin: 0px;
+}
 
