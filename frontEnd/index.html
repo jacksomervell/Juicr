@@ -25,12 +25,12 @@
 <body>
   <div class = "index-container" ng-controller="JuiceController as juices">
 
-    <h1 class = 'logo'>Juicr</h1>
+    <h1 ui-sref="login" class = 'logo'>Juicr</h1>
 
     <div class= "menu">
       <span class = "menu-item" ui-sref="juicing"> Make a juice! | </span>
-      <span class = "menu-item" ui-sref="juicing"> Find a juice | </span>
-      <span class = "menu-item" ui-sref="juicing"> Meet the team | </span>
+      <span class = "menu-item" ui-sref="cabinet"> Find a juice | </span>
+      <span class = "menu-item" h-ref = "#" ui-sref="juicing"> Meet the team | </span>
       <span class = "menu-item" ui-sref="juicing"> Contact us | </span>
   </div>
 
