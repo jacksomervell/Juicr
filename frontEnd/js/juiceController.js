@@ -100,9 +100,9 @@ angular
     console.log('dropped!')
 
     $("#juicer").effect( "shake", {times:35, distance:5}, 3000, function(){
-            self.drops = self.drops + 1})
+            })
     $( "#pouring" ).animate({width: "90px"}, 2000, function(){
-                }).delay(2000).animate({opacity: "0"}, 1000).animate({opacity: 1, width: "0px"}, 0)
+                self.drops = self.drops + 1}).delay(1000).animate({opacity: "0"}, 1000).animate({opacity: 1, width: "0px"}, 0)
       self.blendNoise()
       var vegId = ui.draggable[0].id
       var nutrientID = ui.draggable[0].name

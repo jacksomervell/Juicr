@@ -6,7 +6,7 @@
 
   <div class = "fruit-holder">
  
-    <img ng-repeat="item in juices.fruitList" ng-mousedown = "juices.fruitNoise()" ng-mouseenter = "juices.hoverName = item.name" ng-mouseleave = "juices.hoverName = ''" ng-init="Hello = true" ng-show= "Hello" class= "ng-hide" class = "ingredient-image" name= "{{item.nutrientNo}}" id = "{{item.name}}" jqyoui-draggable="{index: 5, animate:true, placeholder: 'keep'}" data-drag="true" draggable="true"  data-jqyoui-options="{ helper:'clone', cursor: 'move', cursorAt: { top: 56, left: 56 }, revert: 'invalid'}" src="{{item.image}}">
+    <img ng-repeat="item in juices.fruitList" ng-mousedown = "juices.fruitNoise()" ng-mouseenter = "juices.hoverName = item.name" ng-mouseleave = "juices.hoverName = ''" class = "ingredient-image" name= "{{item.nutrientNo}}" id = "{{item.name}}" jqyoui-draggable="{index: 5, animate:true, placeholder: 'keep'}" data-drag="true" draggable="true"  data-jqyoui-options="{ helper:'clone', cursor: 'move', cursorAt: { top: 56, left: 56 }, revert: 'invalid'}" src="{{item.image}}">
 
 
   </div>
@@ -27,10 +27,10 @@
     <div ng-show = 'juices.drops >= 8' class = "eighth-juice"></div>
     <div ng-show = 'juices.drops >= 9' class = "ninth-juice"></div>
 
-  <div id = "nutrition-data" ng-show = "juices.drops > 9">
+  <div id = "nutrition-data"  ng-show = "juices.drops > 0">
     <h1>JUICE MADE!</h1>
     <div ng-repeat = "item in juices.recipeData" >
-    {{item.name}} : {{item.value}}
+    {{item.name}} : {{item.value}}g
     </div>
   </div>
 
