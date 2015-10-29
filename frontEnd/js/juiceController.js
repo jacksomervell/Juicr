@@ -23,16 +23,24 @@ angular
       ingredients: self.ingredients
     }
 
+
+    self.getRecords = function(){
+      self.allRecords = JSON.parse(localStorage.getItem('juicrApp'))
+      
+    }
+
     self.saveJuice = function(){
       console.log(self.storedJuices)
       self.storedJuices = JSON.parse(localStorage.getItem('juicrApp'));
       if (self.storedJuices == null){ self.storedJuices = [] }
 
       self.storedJuices.push(self.thisJuice)
-      console.log('self.thisJuice')
+      console.log(self.thisJuice)
 
       localStorage.setItem('juicrApp', JSON.stringify(self.storedJuices))
       self.allRecords = JSON.parse(localStorage.getItem('juicrApp'))
+      console.log(self.allRecords[1])
+
     }
 
     // this.saveSetup = function() {

@@ -1,1 +1,14 @@
-<h1> Working? </h1>
+<h1> Cabinet </h1>
+
+<div ng-init='juices.getRecords()' ng-controller="JuiceController as juices">
+  <div ng-repeat='juice in juices.allRecords'>
+  
+  <br>
+  <h2>{{juice.juiceName}}</h2>
+  <h3>Creator:  {{juice.personName}}</h3>
+  <h3>Ingredients: {{juice.ingredients.toString()}}</h3>
+  <br>
+  </div>
+
+
+</div>
