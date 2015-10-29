@@ -27,7 +27,7 @@
     <div ng-show = 'juices.drops >= 8' class = "eighth-juice"></div>
     <div ng-show = 'juices.drops >= 9' class = "ninth-juice"></div>
 
-  <div id = "nutrition-data"  ng-show = "juices.drops > 0">
+  <div id = "nutrition-data"  ng-show = "juices.drops > 8">
     <h1>JUICE MADE!</h1>
     <form>
       Your name <input type="text" ng-model='juices.thisJuice.personName' autofocus> <br>
@@ -43,10 +43,10 @@
 
 
   <div id = "juice-ingredient-container">
-  <h1>Ingredients</h1>
-    <div ng-repeat = 'item in juices.ingredients track by $index'>
-    <h3> - {{item}}</h3>
-    </div>
+  <h1 class = "recipe-header">My recipe</h1>
+      <div class = "recipe-item-container" ng-repeat = 'item in juices.ingredients track by $index'>
+      <span class = "recipe-list-item"> - {{item}}</span>
+      </div>
   </div>
 
 </div>
