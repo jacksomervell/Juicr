@@ -43,8 +43,8 @@
   <span class ="saving-juice-info"><strong> Nutritional Info</strong> </span>
     
     <div id = "nutrition-info-recipe-container">
-      <div ng-repeat = "item in juices.recipeData" >
-      {{item.name}} : {{item.value}}g
+      <div class="data-item" ng-repeat = "item in juices.recipeData" >
+      <strong>{{item.name}} :</strong> {{item.value}}g
       </div>
     </div>
   </div>

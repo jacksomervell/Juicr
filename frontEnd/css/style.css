@@ -345,7 +345,7 @@ hr {
     position: relative;
     position: absolute;
     left: 20px;
-    top: 20px;
+    top: 100px;
 
     transform: rotate(-12deg);
     font-family: 'Cambay', sans-serif;
@@ -417,20 +417,26 @@ hr {
     margin: 0 auto;
     position: relative;
     position: absolute;
-    width: 400px;
-    height: 500px;
+    width: 500px;
+    height: 600px;
     left: 400px;
     top: 100px;
     background-color: dodgerblue;
     overflow: hidden;
     color: white;
     border: 3px solid white;
+    border-radius: 10px
 }
 
 #nutrition-info-recipe-container {
+  display: block;
+  margin: 0 auto;
   overflow: scroll;
-  max-height: 120px;
-  border: 3px white
+  max-height: 150px;
+  border: 3px solid white;
+  width: 200px;
+  border-radius: 10px;
+
 }
 
 form {
@@ -438,7 +444,7 @@ form {
 }
 
 input {
-  width:100px;
+  width:140px;
   border:none;
   border-bottom:1px solid #757575;
   border-radius: 3px;
@@ -471,4 +477,9 @@ button {
   font-size: 15px;
   background-color: LimeGreen;
 
+}
+
+.data-item {
+  padding-left: 5px;
+  padding-bottom: 5px;
 }
