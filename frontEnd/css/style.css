@@ -179,7 +179,7 @@ left: 588px;
     position: absolute;
     width: 400px;
     height: 400px;
-    left: 250px;
+    left: 350px;
     top: 100px;
     background-color: blue;
     overflow: scroll;
@@ -206,6 +206,7 @@ left: 588px;
 
 /* ANIMATIONS (FROM ANIMATE.CSS) ======================== */
 /* flip in */
+
 @keyframes flipInX {
   0% {
     transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
@@ -265,6 +266,11 @@ left: 588px;
     transform: translate3d(100%, 0, 0) skewX(30deg);
     opacity: 0;
   }
+
+}
+
+input {
+  color: blue;
 }
 
 

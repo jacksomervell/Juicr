@@ -29,6 +29,13 @@
 
   <div id = "nutrition-data"  ng-show = "juices.drops > 0">
     <h1>JUICE MADE!</h1>
+    <form>
+      Your name <input type="text" ng-model='juices.thisJuice.personName' autofocus> <br>
+      Juice name <input type="text" ng-model='juices.thisJuice.juiceName'autofocus> <br>
+      <button ui-sref="juicing" ng-click='juices.saveJuice()' type="submit">Save your juice! </button>
+    </form>
+
+
     <div ng-repeat = "item in juices.recipeData" >
     {{item.name}} : {{item.value}}g
     </div>
