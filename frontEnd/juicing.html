@@ -2,11 +2,13 @@
 
 <div id = "container" ng-controller="JuiceController as juices">
   
-  <h2 class = "ingredient-name"> {{juices.hoverName}} </h2>
+  <div class = "hover-info-holder">
+    <span class = "ingredient-name"> {{juices.hoverName}} </span><span class = "ingredient-description"> {{juices.hoverDesc}} </span>
+  </div>
 
   <div class = "fruit-holder">
- 
-    <img ng-repeat="item in juices.fruitList" ng-mousedown = "juices.fruitNoise()" ng-mouseenter = "juices.hoverName = item.name" ng-mouseleave = "juices.hoverName = ''" class = "ingredient-image" name= "{{item.nutrientNo}}" id = "{{item.name}}" jqyoui-draggable="{index: 5, animate:true, placeholder: 'keep'}" data-drag="true" draggable="true"  data-jqyoui-options="{ helper:'clone', cursor: 'move', cursorAt: { top: 56, left: 56 }, revert: 'invalid'}" src="{{item.image}}">
+
+    <img ng-repeat="item in juices.fruitList" ng-mousedown = "juices.fruitNoise()" ng-mouseenter = "juices.hoverName = item.name; juices.hoverDesc = item.desc" ng-mouseleave = "juices.hoverName = ''; juices.hoverDesc = ''" class = "ingredient-image" name= "{{item.nutrientNo}}" id = "{{item.name}}" jqyoui-draggable="{index: 5, animate:true, placeholder: 'keep'}" data-drag="true" draggable="true"  data-jqyoui-options="{ helper:'clone', cursor: 'move', cursorAt: { top: 56, left: 56 }, revert: 'invalid'}" src="{{item.image}}">
 
 
   </div>

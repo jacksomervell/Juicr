@@ -12,12 +12,7 @@ body {
   width: 100%;
 }
 
-.ingredient-name {
-   display: inline-block;
-  position: relative;
-  position: absolute;
-  left: 400px;
-}
+
 .dropper {
   height: 100px;
   border: 1px blue
@@ -31,6 +26,7 @@ body {
 
 #juicer {
   position: relative;
+  position: absolute;
   display: inline-block;
   left: 370px;
   top: 100px;
@@ -50,7 +46,8 @@ body {
   display: inline-block;
   position: relative;
   position: absolute;
-  width: 0px;
+  opacity: 0;
+  width: 90px;
   top: 335px;
   left: 680px;
   transform: rotate(0deg);
@@ -61,13 +58,17 @@ display: inline-block;
 position: relative;
 position: absolute;
 width: 94px;
-background-image: url('../images/greenpattern.jpg');
+background-image: url('../images/greenstripes.png');
+background-size: 100%;
 height: 10px;
 top: 460px;
 left: 688px;
 border-bottom-left-radius: 5px;
 border-bottom-right-radius: 5px;
 transition: all linear 0.5s;
+border-bottom: solid 0.1em black;
+border-left: solid 0.1em black;
+border-right: solid 0.1em black;
 }
 
 .second-juice,
@@ -82,9 +83,12 @@ transition: all linear 0.5s;
 position: relative;
 position: absolute;
 width: 94px;
-background-image: url('../images/greenpattern.jpg');
+background-image: url('../images/greenstripes.png');
+background-size: 100%;
 height: 10px;
 left: 688px;
+border-left: solid 0.1em black;
+border-right: solid 0.1em black;
 }
 
 .second-juice {
@@ -158,7 +162,9 @@ left: 688px;
 .fruit-holder {
   width: 200px;
   display: inline-block;
-  float: right;
+  position: relative;
+  position: absolute;
+  right: 0px;
 }
 
 
@@ -368,8 +374,6 @@ hr {
     font-family: 'Cambay', sans-serif;
     color: black;
     transform: rotate(6deg);
-
-
 }
 
 .recipe-item-container {
@@ -378,5 +382,28 @@ hr {
 
 .recipe-list-item {
   padding-left: 30px;
-  
+}
+
+.ingredient-name {
+   display: inline;
+  position: relative;
+  left: 400px;
+  font-family: 'Cambay', sans-serif;
+  color: white;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.ingredient-description {
+   display: inline;
+  position: relative;
+  left: 400px;
+  font-family: 'Cambay', sans-serif;
+  color: black;
+  font-size: 30px;
+}
+
+.hover-info-holder {
+  display: inline-block;
+  width: 500px;
 }
