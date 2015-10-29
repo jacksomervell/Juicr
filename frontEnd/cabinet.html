@@ -8,12 +8,12 @@
   
 
   <br>
-  <h2>{{juice.juiceName}}</h2>
-  <h3>Creator:  {{juice.personName}}</h3>
-  <h3>Ingredients: {{juice.ingredients.toString()}}</h3>
-  <h3 ng-init= "nutrition = false" ng-mouseover = "nutrition = true"> Nutrients <h3>
+  <span class = "juice-title">{{juice.juiceName}}</span>
+  <span>By:  {{juice.personName}}</span>
+  <span>Ingredients: {{juice.ingredients.toString()}}</span>
+  <span ng-init= "nutrition = false" ng-mouseover = "nutrition = true"> Nutrients </span>
   <div ng-show = "nutrition">
-    <h3 ng-click = "nutrition=false"> Close </h3>
+    <span ng-click = "nutrition=false"> Close </span>
     {{juice.recipeData}}
     
   </div>
