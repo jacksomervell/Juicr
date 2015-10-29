@@ -128,7 +128,7 @@ angular
 
     $("#juicer").effect( "shake", {times:35, distance:5}, 3000, function(){
             })
-    $( "#pouring" ).animate({width: "90px"}, 2000, function(){
+    $( "#pouring" ).animate({width: "90px"}, 0, function(){
                 self.drops = self.drops + 1}).delay(1000).animate({opacity: "0"}, 1000).animate({opacity: 1, width: "0px"}, 0)
       self.blendNoise()
       var vegId = ui.draggable[0].id

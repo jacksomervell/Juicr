@@ -51,9 +51,9 @@ body {
   position: relative;
   position: absolute;
   width: 0px;
-  top: 320px;
-  left: 660px;
-  transform: rotate(-20deg);
+  top: 335px;
+  left: 680px;
+  transform: rotate(0deg);
 }
 
 #bottom-juice {
@@ -61,7 +61,7 @@ display: inline-block;
 position: relative;
 position: absolute;
 width: 94px;
-background-color: green;
+background-image: url('../images/greenpattern.jpg');
 height: 10px;
 top: 460px;
 left: 688px;
@@ -82,7 +82,7 @@ transition: all linear 0.5s;
 position: relative;
 position: absolute;
 width: 94px;
-background-color: green;
+background-image: url('../images/greenpattern.jpg');
 height: 10px;
 left: 688px;
 }
