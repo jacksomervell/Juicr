@@ -490,7 +490,7 @@ button {
   font-size: 70px;
   color: white;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #stored-amount {
@@ -500,6 +500,7 @@ button {
   font-size: 25px;
   color: white;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .juice-jar {
@@ -510,6 +511,7 @@ button {
   background-size: 100% 100%;
   overflow: hidden;
   margin: 10px;
+  margin-left: 30px;
 }
 
 .juice-title {
@@ -521,5 +523,82 @@ button {
   left: 0px;
   color: white;
   width: 200px;
+  height: 53px;
   text-align: center;
+  overflow: hidden;
+}
+
+.juice-author {
+  position: relative;
+  display: inline-block;
+  font-family: 'Cambay', sans-serif;
+  font-size: 15px;
+  top: 160px;
+  left: 0px;
+  color: white;
+  width: 200px;
+  text-align: center;
+}
+
+.juice-ingredients {
+  position: relative;
+  display: inline-block;
+  font-family: 'Cambay', sans-serif;
+  font-size: 15px;
+  top: 165px;
+  left: 20px;
+  color: white;
+  cursor: pointer;
+
+}
+
+.juice-nutrients {
+   position: relative;
+  display: inline-block;
+  font-family: 'Cambay', sans-serif;
+  font-size: 15px;
+  top: 165px;
+  left: 48px;
+  color: white;
+  cursor: pointer;
+}
+
+.nutrient-shower{
+  background-color: dodgerblue;
+  border: 3px solid white;
+  border-radius: 5px;
+  overflow: scroll;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  left: 25px;
+}
+
+.ingredient-shower{
+  background-color: dodgerblue;
+  border: 3px solid white;
+  border-radius: 5px;
+  overflow: scroll;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  left: 25px;
+}
+
+.jar-info-title {
+  display: block;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  color: white;
+}
+
+.jar-info {
+  font-family: 'Cambay', sans-serif;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.index-container {
+  border-bottom: 1px solid white;
 }
