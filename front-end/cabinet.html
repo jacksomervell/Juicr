@@ -1,0 +1,35 @@
+
+<div ng-init='juices.getRecords()' ng-controller="JuiceController as juices">
+
+<h1 id = 'cabinet-title'> Cabinet </h1>
+<span id = 'stored-amount'> -- <strong>{{juices.allRecords.length}}</strong> juices stored -- </span>
+
+  <div class= "juice-jar" ng-repeat='juice in juices.allRecords'>
+  
+
+  <br>
+  <span class = "juice-title">{{juice.juiceName}}</span>
+  <span class = "juice-author">By  {{juice.personName}}</span>
+  <span class = "juice-ingredients" ng-init= "ingredients = false" ng-click = "ingredients = true">Ingredients </span>
+  <span class = "juice-nutrients" ng-init= "nutrition = false" ng-click = "nutrition = true"> Nutrients </span>
+  
+  <div class = "nutrient-shower" ng-show = "nutrition">
+    <span class = "jar-info-title"> Nutrients </span>
+    <span class = 'jar-info' ng-click = "nutrition=false"> (Close) </span>
+    <span class = 'jar-info'> {{juice.recipeData}} </span>
+    <span class = 'jar-info' ng-click = "nutrition=false"> (Close) </span>
+  </div>
+
+   <div class = "ingredient-shower" ng-show = "ingredients">
+    <span class = "jar-info-title"> Ingredients </span>
+    <span class = "jar-info" ng-click = "ingredients=false"> (Close) </span>
+    <span class = 'jar-info'>{{juice.ingredients.toString()}} </span>
+    <span class = 'jar-info' ng-click = "ingredients=false"> (Close) </span>
+  </div>
+
+<!--   {{juice.ingredients.toString()}} -->
+
+  <br>
+
+
+</div>

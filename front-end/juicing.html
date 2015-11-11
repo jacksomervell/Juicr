@@ -1,0 +1,62 @@
+
+
+<div id = "container" ng-controller="JuiceController as juices">
+  
+  <div class = "hover-info-holder">
+    <span class = "ingredient-name"> {{juices.hoverName}} </span><span class = "ingredient-description"> {{juices.hoverDesc}} </span>
+  </div>
+
+  <div class = "fruit-holder">
+
+    <img ng-repeat="item in juices.fruitList" ng-mousedown = "juices.fruitNoise()" ng-mouseenter = "juices.hoverName = item.name; juices.hoverDesc = item.desc" ng-mouseleave = "juices.hoverName = ''; juices.hoverDesc = ''" class = "ingredient-image" name= "{{item.nutrientNo}}" id = "{{item.name}}" jqyoui-draggable="{index: 5, animate:true, placeholder: 'keep'}" data-drag="true" draggable="true"  data-jqyoui-options="{ helper:'clone', cursor: 'move', cursorAt: { top: 56, left: 56 }, revert: 'invalid'}" src="{{item.image}}">
+
+
+  </div>
+
+    <img id= "juicer" data-drop="true" jqyoui-droppable="{onDrop:'juices.dropped'}" data-jqyoui-options src = "images/juicer2.png">
+
+    <img id = "beaker" src = "images/beaker-straight.png"> 
+
+    <img id = "pouring" src= "images/sploosh.png">
+
+    <div ng-show = 'juices.drops >= 1'  id = "bottom-juice"></div>
+    <div ng-show = 'juices.drops >= 2' class = "second-juice"></div>
+    <div ng-show = 'juices.drops >= 3' class = "third-juice"></div>
+    <div ng-show = 'juices.drops >= 4' class = "fourth-juice"></div>
+    <div ng-show = 'juices.drops >= 5' class = "fifth-juice"></div>
+    <div ng-show = 'juices.drops >= 6' class = "sixth-juice"></div>
+    <div ng-show = 'juices.drops >= 7' class = "seventh-juice"></div>
+    <div ng-show = 'juices.drops >= 8' class = "eighth-juice"></div>
+    <div ng-show = 'juices.drops >= 9' class = "ninth-juice"></div>
+
+  <div id = "nutrition-data" ng-show = "juices.drops > 8">
+    <h1 class = 'juice-made'>Juice Made!</h1>
+    <span class="saving-juice-info">Time to give your juice a name and save it!</span>
+    <span class="saving-juice-info">Or, <a ui-sref='login' ><strong>remake your juice!</strong></a></span>
+
+    <form>
+      <span class= "inputting"> Your name: <input type="text" ng-model='juices.thisJuice.personName' autofocus></span> <br>
+      <span class= "inputting">Juice name: <input type="text" ng-model='juices.thisJuice.juiceName'autofocus></span> <br>
+      <button ui-sref="cabinet" ng-click='juices.saveJuice(); juices.zeldaNoise()' type="submit">Save your juice! </button>
+    </form> 
+
+  <span class ="saving-juice-info"><strong> Nutritional Info</strong> </span>
+    
+    <div id = "nutrition-info-recipe-container">
+      <div class="data-item" ng-repeat = "item in juices.recipeData" >
+      <strong>{{item.name}} :</strong> {{item.value}}g
+      </div>
+    </div>
+  </div>
+
+
+  <div id = "juice-ingredient-container">
+  <h1 class = "recipe-header">My recipe</h1>
+      <div class = "recipe-item-container" ng-repeat = 'item in juices.ingredients track by $index'>
+      <span class = "recipe-list-item"> - {{item}}</span>
+      </div>
+  </div>
+
+</div>
+
+</body>

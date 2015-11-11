@@ -1,0 +1,604 @@
+body {
+  background-color: IndianRed;
+  position: absolute;
+  width: 100%;
+  height: 1000px;
+}
+
+#container {
+  position: relative;
+  position: absolute;
+  height: 1000px;
+  width: 100%;
+}
+
+
+.dropper {
+  height: 100px;
+  border: 1px blue
+}
+
+.thumbnail {
+  border: 1px solid blue;
+  height: 100px;
+  width: 100px;
+}
+
+#juicer {
+  position: relative;
+  position: absolute;
+  display: inline-block;
+  left: 370px;
+  top: 100px;
+  width: 400px;
+}
+
+#beaker {
+  display: inline-block;
+  position: relative;
+  position: absolute;
+  width: 100px;
+  left: 685px;
+  top: 355px;
+}
+
+#pouring {
+  display: inline-block;
+  position: relative;
+  position: absolute;
+  opacity: 0;
+  width: 90px;
+  top: 335px;
+  left: 680px;
+  transform: rotate(0deg);
+}
+
+#bottom-juice {
+display: inline-block;
+position: relative;
+position: absolute;
+width: 94px;
+background-image: url('../images/greenstripes.png');
+background-size: 100%;
+height: 10px;
+top: 460px;
+left: 688px;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+transition: all linear 0.5s;
+border-bottom: solid 0.1em black;
+border-left: solid 0.1em black;
+border-right: solid 0.1em black;
+}
+
+.second-juice,
+.third-juice,
+.fourth-juice,
+.fifth-juice,
+.sixth-juice,
+.seventh-juice,
+.eighth-juice,
+.ninth-juice {
+  display: inline-block;
+position: relative;
+position: absolute;
+width: 94px;
+background-image: url('../images/greenstripes.png');
+background-size: 100%;
+height: 10px;
+left: 688px;
+border-left: solid 0.1em black;
+border-right: solid 0.1em black;
+}
+
+.second-juice {
+  top: 450px;
+}
+
+
+.third-juice {
+  top: 440px;
+}
+
+.fourth-juice {
+  top: 430px;
+}
+
+.fifth-juice {
+  top: 420px;
+}
+
+.sixth-juice {
+  top: 410px;
+}
+
+.seventh-juice {
+  top: 400px;
+}
+
+.eighth-juice {
+  top: 390px;
+}
+
+.ninth-juice {
+  top: 380px;
+}
+
+#carrot,
+#banana,
+#beetroot,
+#blackberry,
+#broccoli,
+#cabbage,
+#carrot,
+#celery,
+#ginger,
+#lemon,
+#lime,
+#orange,
+#pear,
+#strawberry
+
+ {
+  height: 80px;
+  width: 80px;
+  display: inline-block;
+}
+
+#apple {
+  height: 80px;
+}
+
+.hideThem {
+  visibility: hidden;
+}
+
+.ui-draggable-dragging {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+}
+
+.fruit-holder {
+  width: 200px;
+  display: inline-block;
+  position: relative;
+  position: absolute;
+  right: 0px;
+}
+
+
+
+
+#view-container{
+  min-height: 60%;
+  background: IndianRed;
+  display: block;
+}
+
+.animate-show {
+  line-height: 20px;
+  opacity: 1;
+  padding: 10px;
+  border: 1px solid black;
+  background: white;
+}
+
+/* when hiding the picture */
+.ng-hide-add         { animation:0.5s lightSpeedOut ease; }
+
+/* when showing the picture */
+.ng-hide-remove      { animation:0.5s flipInX ease; }
+
+/* ANIMATIONS (FROM ANIMATE.CSS) ======================== */
+/* flip in */
+
+@keyframes flipInX {
+  0% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  100% {
+    transform: perspective(400px);
+    transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+/* light speed out */
+@keyframes lightSpeedOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes lightSpeedOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+
+}
+
+input {
+  color: blue;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  margin-top: 0px;
+  color: white;
+  display: inline-block;
+  cursor: pointer;
+
+}
+
+.index-container {
+  background: LimeGreen;
+  margin: 0px;
+  height: 60px;
+}
+
+.menu {
+  font-family: 'Cambay', sans-serif;
+  color: white;
+  display: inline-block;
+  float: right;
+  padding-right: 20px;
+  margin-top: 22px;
+  font-weight: bold;
+}
+
+.menu-item {
+  padding-right: 20px;
+  cursor: pointer
+}
+
+.menu-item:hover{
+  color: IndianRed;
+}
+
+.welcome-logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 100;
+  color: white;
+  display: block;
+  text-align: center;
+  
+
+}
+
+.tagline {
+  font-family: 'Cambay', sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Cambay', sans-serif;
+}
+
+.welcome-menu-item {
+  display: block;
+  font-size: 30;
+  text-align: center;
+  margin-top: 20px ;
+}
+
+.welcome-menu-item:hover {
+  color: LimeGreen;
+}
+
+hr {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.recipe-header {
+  text-align: 30px;
+  padding-left: 25px;
+  padding-top:15px;
+  transform: rotate(-6deg);
+}
+
+#juice-ingredient-container {
+    display: inline-block;
+    position: relative;
+    position: absolute;
+    left: 20px;
+    top: 100px;
+
+    transform: rotate(-12deg);
+    font-family: 'Cambay', sans-serif;
+}
+
+#juice-ingredient-container::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background-image: url('../images/notepad.png');
+    background-size: 100% 100%;
+    z-index: -1;
+    font-family: 'Cambay', sans-serif;
+    color: black;
+    transform: rotate(6deg);
+}
+
+.recipe-item-container {
+  transform: rotate(-6deg);
+}
+
+.recipe-list-item {
+  padding-left: 30px;
+  text-transform: capitalize;
+}
+
+.ingredient-name {
+   display: inline;
+  position: relative;
+  left: 400px;
+  font-family: 'Cambay', sans-serif;
+  color: white;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.ingredient-description {
+   display: inline;
+  position: relative;
+  left: 400px;
+  font-family: 'Cambay', sans-serif;
+  color: black;
+  font-size: 30px;
+}
+
+.hover-info-holder {
+  display: inline-block;
+  width: 500px;
+}
+
+.juice-made {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+
+.saving-juice-info {
+  display: block;
+  text-align: center;
+  font-family: 'Cambay', sans-serif;
+  margin-bottom: 20px;
+  font-size: 20px;
+  
+}
+
+#nutrition-data {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    left: 400px;
+    top: 50px;
+    background-color: dodgerblue;
+    overflow: hidden;
+    color: white;
+    border: 3px solid white;
+    border-radius: 10px
+}
+
+#nutrition-info-recipe-container {
+  display: block;
+  margin: 0 auto;
+  overflow: scroll;
+  max-height: 150px;
+  border: 3px solid white;
+  width: 200px;
+  border-radius: 10px;
+
+}
+
+form {
+  padding-left: 10px;
+}
+
+input {
+  width:140px;
+  border:none;
+  border-bottom:1px solid #757575;
+  border-radius: 3px;
+  margin: 0 auto;
+  font-family: 'Cambay', sans-serif;
+  color: dodgerblue;
+  
+}
+
+.inputting {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Cambay', sans-serif;
+}
+
+button {
+  border-color: 3px white;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  font-size: 14px;
+  text-transform: none;
+  height: 35px;
+  width: 120px;
+  text-align: center;
+  font-family: 'Cambay', sans-serif;
+  font-size: 15px;
+  background-color: LimeGreen;
+
+}
+
+.data-item {
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+
+#cabinet-title {
+   text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 70px;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#stored-amount {
+  display: block;
+  text-align: center;
+  font-family: 'Cambay', sans-serif;
+  font-size: 25px;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.juice-jar {
+  display: inline-block;
+  height: 300px;
+  width: 200px;
+  background-image: url('../images/greenbottle.png');
+  background-size: 100% 100%;
+  overflow: hidden;
+  margin: 10px;
+  margin-left: 30px;
+}
+
+.juice-title {
+  position: relative;
+  display: inline-block;
+  font-family: 'Pacifico', cursive;
+  font-size: 30px;
+  top: 150px;
+  left: 0px;
+  color: white;
+  width: 200px;
+  height: 53px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.juice-author {
+  position: relative;
+  display: inline-block;
+  font-family: 'Cambay', sans-serif;
+  font-size: 15px;
+  top: 160px;
+  left: 0px;
+  color: white;
+  width: 200px;
+  text-align: center;
+}
+
+.juice-ingredients {
+  position: relative;
+  display: inline-block;
+  font-family: 'Cambay', sans-serif;
+  font-size: 15px;
+  top: 165px;
+  left: 20px;
+  color: white;
+  cursor: pointer;
+
+}
+
+.juice-nutrients {
+   position: relative;
+  display: inline-block;
+  font-family: 'Cambay', sans-serif;
+  font-size: 15px;
+  top: 165px;
+  left: 48px;
+  color: white;
+  cursor: pointer;
+}
+
+.nutrient-shower{
+  background-color: dodgerblue;
+  border: 3px solid white;
+  border-radius: 5px;
+  overflow: scroll;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  left: 25px;
+}
+
+.ingredient-shower{
+  background-color: dodgerblue;
+  border: 3px solid white;
+  border-radius: 5px;
+  overflow: scroll;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  left: 25px;
+}
+
+.jar-info-title {
+  display: block;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  color: white;
+}
+
+.jar-info {
+  font-family: 'Cambay', sans-serif;
+  font-size: 15px;
+  color: white;
+  cursor: pointer;
+}
+
+.index-container {
+  border-bottom: 1px solid white;
+}
